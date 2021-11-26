@@ -2,31 +2,20 @@ import React, { useEffect, useState } from "react";
 import {
 	Alert,
 	Button,
-	Card,
-	CardContent,
-	CardHeader,
 	Grid,
 	InputLabel,
-	List,
-	ListItem,
-	ListItemButton,
-	ListItemIcon,
-	ListItemText,
 	Snackbar,
 	TextField,
 	Typography,
 } from "@mui/material";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import StaticDatePicker from "@mui/lab/StaticDatePicker";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import useAuth from "../../../context/useAuth";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -37,12 +26,11 @@ import DatePicker from "@mui/lab/DatePicker";
 import { Box } from "@mui/system";
 
 const AllAppoinments = () => {
-	const { user } = useAuth();
 	const [date, setDate] = React.useState(new Date());
 	const [appoinments, setAppoinment] = useState([]);
 	useEffect(() => {
 		fetch(
-			`http://localhost:5000/allAppoinments?date=${new Date(
+			`https://vast-forest-93917.herokuapp.com/allAppoinments?date=${new Date(
 				date,
 			).toLocaleDateString("en-GB")}`,
 		)
@@ -62,7 +50,10 @@ const AllAppoinments = () => {
 	const onSubmit = (data, id) => {
 		console.log(data, id);
 		axios
-			.put(`http://localhost:5000/appoinments/${data?.id}`, data)
+			.put(
+				`https://vast-forest-93917.herokuapp.com/appoinments/${data?.id}`,
+				data,
+			)
 			.then(function (response) {
 				setOpen(true);
 			})
@@ -72,13 +63,13 @@ const AllAppoinments = () => {
 	};
 	const [totalAppoinments, setTotalAppoinment] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:5000/totalAppoinments`)
+		fetch(`https://vast-forest-93917.herokuapp.com/totalAppoinments`)
 			.then((res) => res.json())
 			.then((data) => setTotalAppoinment(data));
 	}, []);
 	const [users, setusers] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:5000/users`)
+		fetch(`https://vast-forest-93917.herokuapp.com/users`)
 			.then((res) => res.json())
 			.then((data) => setusers(data));
 	}, []);

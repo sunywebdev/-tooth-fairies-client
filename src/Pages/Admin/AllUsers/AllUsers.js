@@ -1,10 +1,5 @@
 import {
-	Button,
-	FormControl,
 	Grid,
-	InputLabel,
-	MenuItem,
-	Select,
 	Table,
 	TableBody,
 	TableCell,
@@ -13,13 +8,12 @@ import {
 	TableRow,
 } from "@mui/material";
 import Paper from "@mui/material/Paper";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const AllUsers = () => {
 	const [users, setUsers] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:5000/users`)
+		fetch(`https://vast-forest-93917.herokuapp.com/users`)
 			.then((res) => res.json())
 			.then((data) => setUsers(data));
 	}, []);

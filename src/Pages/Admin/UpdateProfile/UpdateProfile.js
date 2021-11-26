@@ -45,7 +45,7 @@ const UpdateProfile = () => {
 	};
 	const onSubmit = (data) => {
 		axios
-			.put("http://localhost:5000/users/updateUsers", data)
+			.put("https://vast-forest-93917.herokuapp.com/users/updateUsers", data)
 			.then(function (response) {
 				setOpen(true);
 			})
@@ -55,7 +55,9 @@ const UpdateProfile = () => {
 	};
 	const [singleUser, setSingleUser] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:5000/singleUsers?email=${user?.email}`)
+		fetch(
+			`https://vast-forest-93917.herokuapp.com/singleUsers?email=${user?.email}`,
+		)
 			.then((res) => res.json())
 			.then((data) => {
 				setSingleUser(data);

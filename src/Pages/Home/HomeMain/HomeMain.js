@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../../../Shared/Footer/Footer";
 import NavBar from "../../../Shared/NavBar/NavBar";
-
 import Appoinment from "../Appoinment/Appoinment";
 import ContactUs from "../ContactUs/ContactUs";
 import DentalCare from "../DentalCare/DentalCare";

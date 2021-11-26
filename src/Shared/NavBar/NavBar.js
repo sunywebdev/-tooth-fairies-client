@@ -3,14 +3,10 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import useAuth from "../../context/useAuth";
-import LogoutIcon from "@mui/icons-material/Logout";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Menu, MenuItem, MenuList, Typography } from "@mui/material";
-import BookOnlineIcon from "@mui/icons-material/BookOnline";
+import { Menu, MenuItem, Typography } from "@mui/material";
 
 const NavBar = () => {
 	const { user, logOut } = useAuth();

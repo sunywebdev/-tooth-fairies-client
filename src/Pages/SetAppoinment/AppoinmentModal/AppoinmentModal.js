@@ -33,7 +33,7 @@ const AppoinmentModal = ({
 	const { register, handleSubmit } = useForm();
 	const onSubmit = (data) => {
 		axios
-			.post("http://localhost:5000/appoinments", data)
+			.post("https://vast-forest-93917.herokuapp.com/appoinments", data)
 			.then(function (response) {
 				setOpen(false);
 				setMsgOpen(true);

@@ -21,7 +21,7 @@ const PageRols = () => {
 	const { token } = useAuth();
 	const [users, setUsers] = useState([]);
 	useEffect(() => {
-		fetch(`http://localhost:5000/users`)
+		fetch(`https://vast-forest-93917.herokuapp.com/users`)
 			.then((res) => res.json())
 			.then((data) => setUsers(data));
 	}, []);
@@ -36,7 +36,7 @@ const PageRols = () => {
 	const onSubmit = (data) => {
 		console.log(data);
 		axios
-			.put(`http://localhost:5000/users/pageRole`, data, {
+			.put(`https://vast-forest-93917.herokuapp.com/users/pageRole`, data, {
 				headers: {
 					Authorization: `Bearer ${token}`,
 				},
