@@ -23,7 +23,7 @@ const OurServices = () => {
 				<Grid item md={4}>
 					<Card
 						elevation={0}
-						sx={{ maxWidth: 345, backgroundColor: "#DDEAFA" }}>
+						sx={{ maxWidth: 345,}}>
 						<img src={fluoride} style={{ paddingTop: 11 }} alt='' />
 						<CardContent>
 							<Typography
@@ -44,7 +44,7 @@ const OurServices = () => {
 				<Grid item md={4}>
 					<Card
 						elevation={0}
-						sx={{ maxWidth: 345, backgroundColor: "#DDEAFA" }}>
+						sx={{ maxWidth: 345,  }}>
 						<img src={cavity} style={{ paddingTop: 11 }} alt='' />
 						<CardContent>
 							<Typography
@@ -65,7 +65,7 @@ const OurServices = () => {
 				<Grid item md={4}>
 					<Card
 						elevation={0}
-						sx={{ maxWidth: 345, backgroundColor: "#DDEAFA" }}>
+						sx={{ maxWidth: 345, }}>
 						<img src={whitening} style={{ paddingTop: 11 }} alt='' />
 						<CardContent>
 							<Typography
