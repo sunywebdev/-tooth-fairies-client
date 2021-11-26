@@ -35,7 +35,7 @@ const NavBar = () => {
 							sx={{ my: 1 }}
 							exact
 							to='/'>
-							Doctors Portal
+							Tooth Fairies
 						</Link>
 					</Typography>
 					<Box>
