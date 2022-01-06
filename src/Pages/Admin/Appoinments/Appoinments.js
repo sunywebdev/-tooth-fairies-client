@@ -39,7 +39,7 @@ const Appoinments = () => {
 		)
 			.then((res) => res.json())
 			.then((data) => setAppoinment(data));
-	}, [date]);
+	}, [date, user?.email]);
 	console.log(appoinments);
 	const [open, setOpen] = React.useState(false);
 	const handleClose = (event, reason) => {
